@@ -25,7 +25,7 @@ You find more examples in folder: **node_modules/selenium-webdriver/example**.
 Start a test **local** with **Mocha-Reporting** or with **Browserstack**. For this enter the following commands in your CLI.
 
 1. Start **local** with **Mocha-Reporting** <br>
-It's possible to run seperates testfiles or all existing testfiles in folder: **test**. Currently there are two examples in **test**-Folder. You can start the test cases individually with `npm run MC:Example1` , `npm run MC:Example2` or start all with `npm run MC:TestAll`. **MC** means **Mocha**!
+It's possible to run seperates testfiles or all existing testfiles in folder: **test**. Currently there are two examples in **test**-Folder. You can start the test cases individually with `npm run MC:Example1` , `npm run MC:Example2` or start all with `npm run MC:TestAll`. **MC** means **Mocha**!<br>
 :information_source: For running a new created test-case in **test**-folder, add a new script in **package.json** / `scripts` and run it with **npm run** ! <br>
 :information_source: All reports will be saved in the **Reports**-folder.
 
