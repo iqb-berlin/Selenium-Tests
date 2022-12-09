@@ -26,13 +26,11 @@ Start a test **local** with **Mocha-Reporting** or with **Browserstack**. For th
 
 1. Start **local** with **Mocha-Reporting** <br>
 It's possible to run seperates testfiles or all existing testfiles in folder: **test**. Currently there are two examples in **test**-Folder. You can start the test cases individually with `npm run MC:Example1` , `npm run MC:Example2` or start all with `npm run MC:TestAll`. **MC** means **Mocha**!
-
 :information_source: For running a new created test-case in **test**-folder, add a new script in **package.json** / `scripts` and run it with **npm run** ! <br>
 :information_source: All reports will be saved in the **Reports**-folder.
 
 2. Start with **Browserstack**
 It's possible to run seperates testfiles or all existing testfiles in folder: **test**. Currently there are two examples in **test**-Folder. You can start the test cases individually with `npm run BS:Example1` , `npm run BS:Example2` or start all with `npm run BS:TestAll`. **BS** means **Browserstack**!
-
 :information_source: For running a new created test-case in **test**-folder, add a new **BS**-script in **package.json** / `scripts` and run it with **npm run** ! <br>
 :information_source: Runs with browserstack are only possible if you have created a browserstack account. <br>
 :information_source: Reports will be only saved by browserstack. There is no local report cache.
