@@ -26,7 +26,7 @@ Start a test **local** with **Mocha-Reporting** or with **Browserstack**. For th
 
 1. Start **local** with **Mocha-Reporting** <br>
 It's possible to run seperates testfiles or all existing testfiles in test-folder. Currently there are two examples in test-folder. You can start the test cases individually with `npm run MC:Example1` , `npm run MC:Example2` or start all with `npm run MC:TestAll`. "MC" means Mocha!<br>
-:information_source: For running a new created test-case in test-folder, add a new script in **package.json** / `scripts`.<br>
+:information_source: For running a new created test-case in test-folder, add a new "MC"-script in **package.json** / `scripts`.<br>
 :information_source: All reports will be saved in the **Reports**-folder.
 
 2. Start with **Browserstack** <br>
