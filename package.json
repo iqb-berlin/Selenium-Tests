@@ -1,0 +1,41 @@
+{
+  "name": "tc_testing",
+  "version": "1.0.0",
+  "description": "Testcenter Testing",
+  "scripts": {
+    "BS:Example1": "browserstack-node-sdk mocha test/Example1.js --timeout=60000",
+    "BS:Example2": "browserstack-node-sdk mocha test/Example2.js --timeout=60000",
+    "BS:TestAll": "browserstack-node-sdk mocha --timeout=60000",
+    "MC:Example1": "mocha test/Example1.js --no-timeouts --reporter mochawesome --reporter-options reportDir=D:/IQB/GitHub/Selenium_Testsuite/Reports,reportFilename=TestResults",
+    "MC:Example2": "mocha test/Example2.js --no-timeouts --reporter mochawesome --reporter-options reportDir=D:/IQB/GitHub/Selenium_Testsuite/Reports,reportFilename=TestResults",
+    "MC:TestAll": "mocha --no-timeouts --reporter mochawesome --reporter-options reportDir=D:/IQB/GitHub/Selenium_Testsuite/Reports,reportFilename=TestResults"    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobhu1981/TC_Testing.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tobhu1981/TC_Testing/issues"
+  },
+  "homepage": "https://github.com/tobhu1981/TC_Testing#readme",
+  "dependencies": {
+    "browserstack": "^1.6.1",
+    "browserstack-local": "^1.4.8",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "chai-json": "^1.0.0",
+    "mocha": "^9.2.2",
+    "mochawesome": "^7.1.3",
+    "selenium": "^2.20.0",
+    "selenium-webdriver": "^4.1.2"
+  },
+  "devDependencies": {
+    "browserstack-node-sdk": "latest"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "author": ""
+}

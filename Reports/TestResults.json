@@ -1,0 +1,160 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-06T09:28:23.629Z",
+    "end": "2022-12-06T09:28:34.922Z",
+    "duration": 11293,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f57354b4-9eb4-442a-9358-42ba85e1423a",
+      "title": "",
+      "fullFile": "D:\\IQB\\GitHub\\Selenium_Testsuite\\test\\Example.js",
+      "file": "\\test\\Example.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3701f0a6-f0c1-4066-98a5-787845a58e57",
+          "title": "Login-Logout Procedure",
+          "fullFile": "D:\\IQB\\GitHub\\Selenium_Testsuite\\test\\Example.js",
+          "file": "\\test\\Example.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Login-Logout Procedure\"",
+              "fullTitle": "Login-Logout Procedure \"before each\" hook in \"Login-Logout Procedure\"",
+              "timedOut": false,
+              "duration": 2652,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser(BROWSER).build();\n//setze impliziten Timeout: Jedem Schritt in dieser laufenden Webdriver Instanz wird eine Zeit eingeräumt. \n//Nach Ablauf dieser Zeit wird ein Timeout generiert.\nawait driver.manage().setTimeouts({ implicit: 30000 });\n//Öffne Webadresse\nawait driver.get(URL);",
+              "err": {},
+              "uuid": "ad400026-6d9f-4324-bcd9-f15c9b2f6792",
+              "parentUUID": "3701f0a6-f0c1-4066-98a5-787845a58e57",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Login-Logout Procedure\"",
+              "fullTitle": "Login-Logout Procedure \"after each\" hook in \"Login-Logout Procedure\"",
+              "timedOut": false,
+              "duration": 616,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Zerstöre Webdriver Instanz\nawait driver.quit();",
+              "err": {},
+              "uuid": "47b04f41-0162-4a02-b313-011ad32ece4e",
+              "parentUUID": "3701f0a6-f0c1-4066-98a5-787845a58e57",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "LoginAsAdmin",
+              "fullTitle": "Login-Logout Procedure LoginAsAdmin",
+              "timedOut": false,
+              "duration": 1290,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const USERNAME = utils.LoginSuperAdmin.user;\n                const KENNWORT = utils.LoginSuperAdmin.pw;\n                //Prüfe ob Seite geladen wurde\n                let CurrentUrl = await driver.getCurrentUrl();\n                assert.equal(CurrentUrl, URL, 'Seite nicht vollständig geladen??');\n                //Eingabe Logindaten\n                await driver.findElement(By.id(\"mat-input-0\")).click();\n                await driver.findElement(By.id(\"mat-input-0\")).sendKeys(USERNAME);\n                await driver.findElement(By.id(\"mat-input-1\")).click();\n                await driver.findElement(By.id(\"mat-input-1\")).sendKeys(KENNWORT);\n                //Klick auf Login als Admin\n                await driver.findElement(By.css(\"[data-cy=\\\"login-admin\\\"]\")).click();\n                //Prüfe ob Anmeldug als Admin erfolgreich: Button Systemverwaltung vorhanden?\n                let WebEl_SysSetting = await driver.findElement(By.css(\"[data-cy=\\\"goto-superadmin\\\"]\")).isDisplayed();\n                assert.isTrue(WebEl_SysSetting, 'Button Systemverwaltung nicht vorhanden. Anmeldung als SuperAdmin nicht erfolgreich?');",
+              "err": {},
+              "uuid": "4cc69674-b469-40b9-9b21-08d01a34fd27",
+              "parentUUID": "3701f0a6-f0c1-4066-98a5-787845a58e57",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "LoginAsUser and Logout Procedure",
+              "fullTitle": "Login-Logout Procedure LoginAsUser and Logout Procedure",
+              "timedOut": false,
+              "duration": 3719,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const USERNAME = utils.LoginUser.user;\n                const KENNWORT = utils.LoginUser.pw;\n                //Prüfe ob Seite geladen wurde\n                let CurrentUrl = await driver.getCurrentUrl();\n                assert.equal(CurrentUrl, URL, 'Seite nicht vollständig geladen??');\n                //Eingabe Login Daten\n                await driver.findElement(By.id(\"mat-input-0\")).click();\n                await driver.findElement(By.id(\"mat-input-0\")).sendKeys(USERNAME);\n                await driver.findElement(By.id(\"mat-input-1\")).click();\n                await driver.findElement(By.id(\"mat-input-1\")).sendKeys(KENNWORT);\n                await driver.findElement(By.css(\"[data-cy=\\\"login-user\\\"]\")).click();\n                //Prüfe ob Anmeldug als User erfolgreich: Button \"Neu anmelden\" vorhanden?\n                let WebEl_Logout = await driver.findElement(By.css(\"[data-cy=\\\"logout\\\"]\")).isDisplayed();\n                assert.isTrue(WebEl_Logout, 'Button neu anmelden nicht vorhanden. Anmeldung als User fehlgeschlagen??');\n                await driver.sleep(1000);\n                //Abmeldung\n                await driver.findElement(By.css(\"[data-cy=\\\"logout\\\"]\")).click();\n                //Prüfe ob Abmeldug erfolgreich: Button LoginUser wieder vorhanden?\n                let WebEl_LoginUser = await driver.findElement(By.css(\"[data-cy=\\\"login-user\\\"]\")).isDisplayed();\n                assert.isTrue(WebEl_LoginUser, 'Button LoginUser nicht vorhanden. Abmeldung fehlgeschlagen??');",
+              "err": {},
+              "uuid": "ae03645e-8753-4093-931a-77785310e064",
+              "parentUUID": "3701f0a6-f0c1-4066-98a5-787845a58e57",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4cc69674-b469-40b9-9b21-08d01a34fd27",
+            "ae03645e-8753-4093-931a-77785310e064"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5009,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "TestResults",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "D:/IQB/GitHub/Selenium_Testsuite/Reports",
+        "reportFilename": "TestResults"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

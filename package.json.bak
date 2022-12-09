@@ -1,0 +1,19 @@
+{
+  "name": "tc_testing",
+  "version": "1.0.0",
+  "description": "Testcenter Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobhu1981/TC_Testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tobhu1981/TC_Testing/issues"
+  },
+  "homepage": "https://github.com/tobhu1981/TC_Testing#readme"
+}
