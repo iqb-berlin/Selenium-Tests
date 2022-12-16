@@ -6,7 +6,7 @@ let InitTest = {
     "url" : "https://testcenter.iqb.hu-berlin.de/#/r/login/",
     
     //Hier können die folgenden Browser gewählt werden: MicrosoftEdge, chrome, firefox
-    //Bitte genau so eintragen (Schreibweise beachten)
+    //Bitte genau so eintragen (Groß-Kleinschreibung beachten)
     "browser" : "firefox"
 }
 
