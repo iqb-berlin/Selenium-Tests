@@ -1,42 +1,49 @@
-Use it to create some specific **E2E-tests** with **Selenium**. Excecute the created tests with virtual devices on **browserstack** or with your **local** browser. In the folder: **test** you can find some test examples. Use this code structure to create your spezific test in the same folder. Run your test with your preferred browser **local** or on **browserstack**.
+Diese Umgebung kann verwendet werden, um E2E-tests mit Selenium einzurichten. Mittels dieser Umgebung ist es möglich Tests gegen emulierte Geräte auf Browserstack und gegen lokale Browser auszuführen. Im Ordner: *test* sind zwei Dateien mit den Namen: *Example1.js* und `*Example2.js* zu finden. Diese Dateien enthalten bsph. Testcode. Mittels dieser Vorlagen können weitere Tests im gleichen Ordner angelegt werden. Dazu muss eine weitere Datei mit gleicher Endung dem Ordner hinzugefügt werden und der gewünschte Testcode eingegeben werden. Abschließend kann der neue Test mit den unten aufgeführten Befehlen sowohl lokal als auch gegen Browserstack gestartet werden.
 
-[Here](https://www.selenium.dev/documentation/webdriver/) you can find more information about selenium webdriver.<br>
-You find more examples in folder: **node_modules/selenium-webdriver/example**.
+[Hier](https://www.selenium.dev/documentation/webdriver/) sind weitere Informationen zu Selenium-Webdriver zu finden.<br>
+Weitere Beispiele finden Sie im Verzeichnis: *node_modules/selenium-webdriver/example*.
 
-## Preconditions
+## Vorbedingungen
 
-* install an IDE (for example Visual Studio Code)
-* install [git](https://git-scm.com/downloads)
-* install [node.js](https://nodejs.org/de/download/)
-* clone this repository
-* run [npm i]() for install all dependencies
+* installieren einer IDE (Bspw. Visual Studio Code)
+* installieren von [Git](https://git-scm.com/downloads)
+* installieren von [Node.js](https://nodejs.org/de/download/)
+* klonen dieses Repositories
+* Eingabe des Befehls [npm i]() um alle Abhängigkeiten zu installieren
 
-**to use local with Mocha-Reporting:**
+**Für die lokale Benutzung mit Mocha-Berichten:**
 
-* To run a test with a specific browser you have to download the [browser driver](https://www.npmjs.com/package/selenium-webdriver) an copy in your System-PATH (Systemvariable)
-* Set the browser you want to test: **utils.js** / `browser`. Write the names of the browsers only as they are listed in the code comments.
+* Um einen lokalen Test zu starten, muss zuvor der entsprechende [Webdriver](https://www.npmjs.com/package/selenium-webdriver) für den zu testenden Browser heruntergeladen werden. Anschließend muss der Speicherort dieses Treibers in den Systemvariablen (PATH) Ihres Systems angegeben werden.
+* Im Anschluss muss der zu testende Browser in der folgenden Datei: *utils.js* / `browser` angegeben werden. Der Name des gewünschten Browsers muss genauso geschrieben werden, wie in den Programmkommentaren an dieser Stelle angegeben ist.
 
-**to use with Browserstack:**
+**Für die Benutzung mit Browserstack:**
 
-* If you want to start a test with browserstack you need a browserstack account. After you have registered, you will receive authentification data. You have to enter authentification data in the configuration file **browserstack.yml** / `Username` and `access_key`. You can use several Browser and Devices with browserstack. Set the Browser and Devices in the same configuration file **browserstack.yml** / `browsers`.
+* Bevor eine Testung gegen Browserstack durchgeführt werden kann, wird ein Konto bei Browserstack benötigt. Nach der Anmeldung werden Authentifizierungsdaten präsentiert, die in der folgenden Datei eingetragen werden müssen: *browserstack.yml* / `Username` and `access_key`. In der gleichen Datei können die zu testenden Browser und Betriebssysteme unter: *browserstack.yml* / `browsers` angegeben werden.
 
-## Start Testing
+## Starten der Testung
 
-Start a test **local** with **Mocha-Reporting** or with **Browserstack**. For this enter the following commands in your CLI.
+Zum starten einer lokalen Testung mit Mocha-Berichten oder mit Browserstack, müssen die nachfolgenden Befehle in die CLI eingegeben werden.
 
-1. Start **local** with **Mocha-Reporting** <br>
-It's possible to run seperates testfiles or all existing testfiles in test-folder. Currently there are two examples in test-folder. You can start the test cases individually with `npm run MC:Example1` , `npm run MC:Example2` or start all with `npm run MC:TestAll`. "MC" means Mocha!<br>
-:information_source: For running a new created test-case in test-folder, add a new "MC"-script in **package.json** / `scripts`.<br>
-:information_source: All reports will be saved in the **Reports**-folder.
+### Lokal starten mit Mocha-Berichten
 
-2. Start with **Browserstack** <br>
-It's possible to run seperates testfiles or all existing testfiles in test-folder. Currently there are two examples in test-folder. You can start the test cases individually with `npm run BS:Example1` , `npm run BS:Example2` or start all with `npm run BS:TestAll`. "BS" means Browserstack!<br>
-:information_source: For running a new created test-case in test-folder, add a new "BS"-script in **package.json** / `scripts`.<br>
-:information_source: Runs with browserstack are only possible if you have created a browserstack account. <br>
-:information_source: Reports will be only saved by browserstack. There is no local report cache.
+Es ist möglich einzelne Tests zustarten oder alle im Ordner: *test* befindlichen gemeinsam. 
 
-## to do
+* Einzelnen Test starten: `npm run MC: Name der Testdatei`
+* Alle Tests starten: `npm run MC:TestAll`
 
-* Verzeichnispfad für Reports parametrierbar halten
+:information_source: Um einen neu angelegten einzelen Test zu starten, ist dieser auch im hier: *package.json* / `scripts` mit dem Kürzel **MS** (Mocha) einzutragen: .
 
----
+:information_source: Alle Berichte werden im Ordner *Reports* gespeichert. Der letzte Bericht wird dabei vom aktuellen Bericht überschrieben.
+
+### Starten mit Browserstack
+
+Es ist möglich einzelne Tests zustarten oder alle im Ordner: *test* befindlichen gemeinsam.
+
+* Einzelnen Test starten: `npm run BS:Name der Testdatei`
+* Alle Tests starten: `npm run BS:TestAll`
+
+:information_source: Um einen neu angelegten einzelen Test zu starten, ist dieser auch im hier: *package.json* / `scripts` mit dem Kürzel **BS** (Browserstack) einzutragen.
+
+:information_source: Testen mit Browserstack ist nur möglich, wenn zuvor ein Konto bei Browserstack eingerichtet wurde!
+
+:information_source: Berichte werden nur bei Browserstack gespeichert, es findet keine lokale Speicherung statt!
