@@ -42,7 +42,7 @@ Es ist möglich einzelne Tests zustarten oder alle im Ordner: *test* befindliche
 * Einzelnen Test starten: `npm run BS:Name der Testdatei`
 * Alle Tests starten: `npm run BS:TestAll`
 
-:information_source: Um einen neu angelegten einzelnen Test zu starten, ist dieser auch im hier: *package.json* / `scripts` mit dem Kürzel **BS** (Browserstack) einzutragen.
+:information_source: Um einen neu angelegten einzelnen Test zu starten, ist dieser hier: *package.json* / `scripts` mit dem Kürzel **BS** (Browserstack) anzulegen.
 
 :information_source: Testen mit Browserstack ist nur möglich, wenn zuvor ein Konto bei Browserstack eingerichtet wurde!
 
