@@ -13,7 +13,7 @@ Weitere Beispiele finden Sie im Verzeichnis: *node_modules/selenium-webdriver/ex
 
 **Für die lokale Benutzung mit Mocha-Berichten:**
 
-* Um einen lokalen Test zu starten, muss zuvor der entsprechende [Webdriver](https://www.npmjs.com/package/selenium-webdriver) für den zu testenden Browser heruntergeladen werden. Anschließend muss der Speicherort dieses Treibers in den Systemvariablen (PATH) Ihres Systems angegeben werden.
+* Um einen lokalen Test zu starten, muss zuvor der entsprechende [Webdriver](https://www.npmjs.com/package/selenium-webdriver) für den zu testenden Browser heruntergeladen werden. Anschließend muss der Speicherort dieses Treibers in den Systemvariablen (PATH) des Betriebssystems angegeben werden.
 * Im Anschluss muss der zu testende Browser in der folgenden Datei: *utils.js* / `browser` angegeben werden. Der Name des gewünschten Browsers muss genauso geschrieben werden, wie in den Programmkommentaren an dieser Stelle angegeben ist.
 
 **Für die Benutzung mit Browserstack:**
@@ -31,7 +31,7 @@ Es ist möglich einzelne Tests zustarten oder alle im Ordner: *test* befindliche
 * Einzelnen Test starten: `npm run MC: Name der Testdatei`
 * Alle Tests starten: `npm run MC:TestAll`
 
-:information_source: Um einen neu angelegten einzelen Test zu starten, ist dieser auch im hier: *package.json* / `scripts` mit dem Kürzel **MS** (Mocha) einzutragen: .
+:information_source: Um einen neu angelegten einzelen Test zu starten, ist dieser hier: *package.json* / `scripts` mit dem Kürzel **MS** (Mocha) anzulegen.
 
 :information_source: Alle Berichte werden im Ordner *Reports* gespeichert. Der letzte Bericht wird dabei vom aktuellen Bericht überschrieben.
 
@@ -42,7 +42,7 @@ Es ist möglich einzelne Tests zustarten oder alle im Ordner: *test* befindliche
 * Einzelnen Test starten: `npm run BS:Name der Testdatei`
 * Alle Tests starten: `npm run BS:TestAll`
 
-:information_source: Um einen neu angelegten einzelen Test zu starten, ist dieser auch im hier: *package.json* / `scripts` mit dem Kürzel **BS** (Browserstack) einzutragen.
+:information_source: Um einen neu angelegten einzelnen Test zu starten, ist dieser auch im hier: *package.json* / `scripts` mit dem Kürzel **BS** (Browserstack) einzutragen.
 
 :information_source: Testen mit Browserstack ist nur möglich, wenn zuvor ein Konto bei Browserstack eingerichtet wurde!
 
