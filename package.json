@@ -6,10 +6,10 @@
     "BS:Example1": "browserstack-node-sdk mocha test/Example1.js --timeout=60000",
     "BS:Example2": "browserstack-node-sdk mocha test/Example2.js --timeout=60000",
     "BS:TestAll": "browserstack-node-sdk mocha --timeout=60000",
-    "MC:Example1": "mocha test/Example1.js --no-timeouts --reporter mochawesome --reporter-options reportDir=D:/IQB/GitHub/Selenium_Testsuite/Reports,reportFilename=TestResults",
-    "MC:Example2": "mocha test/Example2.js --no-timeouts --reporter mochawesome --reporter-options reportDir=D:/IQB/GitHub/Selenium_Testsuite/Reports,reportFilename=TestResults",
-    "MC:NeuerTest": "mocha test/NeuerTest.js --no-timeouts --reporter mochawesome --reporter-options reportDir=D:/IQB/GitHub/Selenium_Testsuite/Reports,reportFilename=TestResults",
-    "MC:TestAll": "mocha --no-timeouts --reporter mochawesome --reporter-options reportDir=D:/IQB/GitHub/Selenium_Testsuite/Reports,reportFilename=TestResults"    
+    "MC:Example1": "mocha test/Example1.js --no-timeouts --reporter mochawesome --reporter-options reportDir=./Reports,reportFilename=TestResults",
+    "MC:Example2": "mocha test/Example2.js --no-timeouts --reporter mochawesome --reporter-options reportDir=./Reports,reportFilename=TestResults",
+    "MC:NeuerTest": "mocha test/NeuerTest.js --no-timeouts --reporter mochawesome --reporter-options reportDir=./Reports,reportFilename=TestResults",
+    "MC:TestAll": "mocha --no-timeouts --reporter mochawesome --reporter-options reportDir=./Reports,reportFilename=TestResults"    
   },
   "repository": {
     "type": "git",

@@ -18,7 +18,9 @@ describe('Impressum Funktion', function () {
 
         //tue etwas bevor alle Testschritte (it's) ausgeführt werden
         before(async function () {
-            driver = await new Builder().forBrowser(BROWSER).build();
+            driver = await new Builder()
+            .forBrowser(BROWSER)
+            .build();
             //Öffne angegebene Webadresse
             await driver.get(URL);
          });
